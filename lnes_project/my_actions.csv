@@ -1,0 +1,101 @@
+date,close,simulated_close,order_flow,cluster_id,headline,action_random,action_momentum,action_contrarian,action_news
+2024-01-01,98.3,98.321384019794,1.0,1,Company A reports cooling earnings outlook,buy,hold,hold,hold
+2024-01-02,98.44,98.3400443412378,1.0,1,Central bank hints at improving policy stance,buy,buy,sell,hold
+2024-01-03,99.02,98.33993669767219,0.0,1,Commodity prices pressure amid supply shifts,hold,buy,sell,hold
+2024-01-04,98.78,98.34130929479305,0.0,1,Tech sector sees weak investment inflows,hold,sell,buy,hold
+2024-01-05,100.41,98.32112201161523,-1.0,1,Geopolitical tensions support trade routes,sell,buy,sell,hold
+2024-01-06,99.87,98.30328040413535,-1.0,2,Consumer demand shows strong trend,hold,sell,buy,sell
+2024-01-07,98.25,98.32372343440552,1.0,1,Regulators propose strong oversight reforms,buy,sell,buy,hold
+2024-01-08,99.53,98.3229930967001,0.0,0,Housing market data challenge expectations,hold,buy,sell,hold
+2024-01-09,100.23,98.30336369475417,-1.0,1,Energy firms announce cooling capital plans,sell,sell,buy,hold
+2024-01-10,99.43,98.2855272267095,-1.0,1,Currency markets experience cooling volatility,sell,sell,buy,hold
+2024-01-11,98.9,98.263651171539,-1.0,1,Company A reports stable earnings outlook,sell,sell,buy,hold
+2024-01-12,99.26,98.24432867330044,-1.0,1,Central bank hints at mixed policy stance,sell,sell,buy,hold
+2024-01-13,99.77,98.24509215778177,0.0,1,Commodity prices stabilize amid supply shifts,hold,sell,buy,hold
+2024-01-14,100.29,98.22455202876039,-1.0,1,Tech sector sees mixed investment inflows,sell,buy,sell,hold
+2024-01-15,100.31,98.22448966158109,0.0,1,Geopolitical tensions support trade routes,hold,sell,buy,hold
+2024-01-16,99.38,98.18354776153261,-2.0,2,Consumer demand shows cooling trend,sell,sell,buy,sell
+2024-01-17,99.36,98.16241288852079,-1.0,1,Regulators propose mixed oversight reforms,sell,sell,buy,hold
+2024-01-18,100.24,98.14449380874609,-1.0,0,Housing market data reshape expectations,sell,sell,buy,hold
+2024-01-19,101.88,98.12346394384792,-1.0,1,Energy firms announce weak capital plans,sell,sell,buy,hold
+2024-01-20,100.74,98.10278145679857,-1.0,1,Currency markets experience stable volatility,sell,sell,buy,hold
+2024-01-21,101.45,98.10262605136063,0.0,1,Company A reports strong earnings outlook,hold,sell,buy,hold
+2024-01-22,103.12,98.10320150873798,0.0,1,Central bank hints at improving policy stance,hold,sell,buy,hold
+2024-01-23,103.81,98.12355458326455,1.0,1,Commodity prices stabilize amid supply shifts,buy,buy,sell,hold
+2024-01-24,103.36,98.12259228726828,0.0,1,Tech sector sees weak investment inflows,hold,buy,sell,hold
+2024-01-25,103.25,98.14299451901122,1.0,1,Geopolitical tensions stabilize trade routes,buy,sell,buy,hold
+2024-01-26,103.49,98.12377380975056,-1.0,2,Consumer demand shows improving trend,hold,buy,sell,sell
+2024-01-27,102.47,98.12324462316214,0.0,1,Regulators propose stable oversight reforms,hold,sell,buy,hold
+2024-01-28,102.19,98.1019567182477,-1.0,0,Housing market data challenge expectations,sell,sell,buy,hold
+2024-01-29,101.9,98.10186167619787,0.0,1,Energy firms announce weak capital plans,hold,sell,buy,hold
+2024-01-30,104.29,98.12068715440043,1.0,1,Currency markets experience strong volatility,buy,sell,buy,hold
+2024-01-31,104.17,98.12121084680129,0.0,1,Company A reports mixed earnings outlook,hold,buy,sell,hold
+2024-02-01,103.35,98.12209198370549,0.0,1,Central bank hints at stable policy stance,hold,buy,sell,hold
+2024-02-02,102.59,98.10300410759147,-1.0,1,Commodity prices pressure amid supply shifts,sell,buy,sell,hold
+2024-02-03,102.48,98.08309368555356,-1.0,1,Tech sector sees strong investment inflows,sell,sell,buy,hold
+2024-02-04,102.46,98.06456033227283,-1.0,1,Geopolitical tensions pressure trade routes,sell,sell,buy,hold
+2024-02-05,101.51,98.04522018056251,-1.0,2,Consumer demand shows improving trend,hold,sell,buy,sell
+2024-02-06,101.89,98.04521473955364,0.0,1,Regulators propose weak oversight reforms,hold,sell,buy,hold
+2024-02-07,102.37,98.02632251279316,-1.0,0,Housing market data support expectations,sell,sell,buy,hold
+2024-02-08,102.88,98.00723827950377,-1.0,1,Energy firms announce weak capital plans,sell,sell,buy,hold
+2024-02-09,104.5,98.02596643937153,1.0,1,Currency markets experience stable volatility,buy,sell,buy,hold
+2024-02-10,104.0,98.0047399627763,-1.0,1,Company A reports strong earnings outlook,sell,buy,sell,hold
+2024-02-11,102.63,97.98504618498811,-1.0,1,Central bank hints at cooling policy stance,sell,sell,buy,hold
+2024-02-12,102.82,97.98385616924153,0.0,0,Commodity prices support amid supply shifts,hold,sell,buy,hold
+2024-02-13,103.16,97.9639823325877,-1.0,1,Tech sector sees weak investment inflows,sell,sell,buy,hold
+2024-02-14,101.76,97.98450130726084,1.0,1,Geopolitical tensions pressure trade routes,buy,sell,buy,hold
+2024-02-15,100.44,97.98348720784942,0.0,2,Consumer demand shows strong trend,buy,buy,sell,sell
+2024-02-16,100.17,98.00321653769228,1.0,1,Regulators propose improving oversight reforms,buy,sell,buy,hold
+2024-02-17,99.12,98.02214931913554,1.0,0,Housing market data challenge expectations,buy,buy,sell,hold
+2024-02-18,97.7,98.00091681646354,-1.0,1,Energy firms announce weak capital plans,sell,buy,sell,hold
+2024-02-19,96.96,98.02282579799112,1.0,1,Currency markets experience mixed volatility,buy,sell,buy,hold
+2024-02-20,98.77,98.00137729440506,-1.0,1,Company A reports stable earnings outlook,sell,buy,sell,hold
+2024-02-21,97.16,97.98157205569363,-1.0,1,Central bank hints at stable policy stance,sell,sell,buy,hold
+2024-02-22,96.95,97.98289111644966,0.0,1,Commodity prices reshape amid supply shifts,hold,sell,buy,hold
+2024-02-23,95.78,98.00175683430028,1.0,1,Tech sector sees improving investment inflows,buy,buy,sell,hold
+2024-02-24,96.49,98.02181678341006,1.0,1,Geopolitical tensions pressure trade routes,buy,buy,sell,hold
+2024-02-25,95.92,98.0025712832362,-1.0,2,Consumer demand shows cooling trend,hold,buy,sell,sell
+2024-02-26,97.82,98.02284697481977,1.0,1,Regulators propose mixed oversight reforms,buy,sell,buy,hold
+2024-02-27,96.86,98.02307995295197,0.0,0,Housing market data support expectations,hold,buy,sell,hold
+2024-02-28,97.27,98.04394217975793,1.0,1,Energy firms announce cooling capital plans,buy,buy,sell,hold
+2024-02-29,97.53,98.0644135648442,1.0,1,Currency markets experience improving volatility,buy,buy,sell,hold
+2024-03-01,95.76,98.06515634999089,0.0,1,Company A reports weak earnings outlook,hold,buy,sell,hold
+2024-03-02,94.86,98.08386638578466,1.0,1,Central bank hints at cooling policy stance,buy,buy,sell,hold
+2024-03-03,94.22,98.06427116563925,-1.0,0,Commodity prices support amid supply shifts,sell,buy,sell,hold
+2024-03-04,92.95,98.06400591911235,0.0,1,Tech sector sees strong investment inflows,hold,sell,buy,hold
+2024-03-05,93.79,98.08414288475984,1.0,1,Geopolitical tensions challenge trade routes,buy,sell,buy,hold
+2024-03-06,94.06,98.0650339234467,-1.0,2,Consumer demand shows cooling trend,hold,buy,sell,sell
+2024-03-07,92.83,98.06516588324538,0.0,1,Regulators propose cooling oversight reforms,hold,sell,buy,hold
+2024-03-08,91.65,98.0457733171582,-1.0,0,Housing market data support expectations,sell,buy,sell,hold
+2024-03-09,91.66,98.02735697988382,-1.0,1,Energy firms announce improving capital plans,sell,sell,buy,hold
+2024-03-10,91.23,98.04723413036211,1.0,1,Currency markets experience strong volatility,buy,sell,buy,hold
+2024-03-11,92.23,98.02742695477247,-1.0,1,Company A reports mixed earnings outlook,sell,buy,sell,hold
+2024-03-12,92.09,98.0278192269203,0.0,1,Central bank hints at mixed policy stance,hold,sell,buy,hold
+2024-03-13,90.44,98.00746036335273,-1.0,1,Commodity prices reshape amid supply shifts,sell,buy,sell,hold
+2024-03-14,88.74,98.02733448040973,1.0,1,Tech sector sees mixed investment inflows,buy,sell,buy,hold
+2024-03-15,87.8,98.02878276617268,0.0,1,Geopolitical tensions stabilize trade routes,hold,buy,sell,hold
+2024-03-16,86.53,97.98788480774816,-2.0,2,Consumer demand shows weak trend,sell,buy,sell,sell
+2024-03-17,86.11,97.96994024086398,-1.0,1,Regulators propose strong oversight reforms,sell,sell,buy,hold
+2024-03-18,85.19,97.950036991074,-1.0,0,Housing market data stabilize expectations,sell,sell,buy,hold
+2024-03-19,83.7,97.92932472146529,-1.0,1,Energy firms announce strong capital plans,sell,sell,buy,hold
+2024-03-20,83.54,97.92925141828954,0.0,1,Currency markets experience weak volatility,hold,sell,buy,hold
+2024-03-21,84.23,97.91077475005042,-1.0,1,Company A reports improving earnings outlook,sell,sell,buy,hold
+2024-03-22,84.53,97.93114639974172,1.0,1,Central bank hints at improving policy stance,buy,sell,buy,hold
+2024-03-23,83.19,97.90939790632244,-1.0,1,Commodity prices challenge amid supply shifts,sell,buy,sell,hold
+2024-03-24,82.75,97.92969038202548,1.0,1,Tech sector sees mixed investment inflows,buy,sell,buy,hold
+2024-03-25,82.32,97.92977010079787,0.0,1,Geopolitical tensions stabilize trade routes,hold,buy,sell,hold
+2024-03-26,81.93,97.91010779651855,-1.0,2,Consumer demand shows stable trend,hold,buy,sell,sell
+2024-03-27,80.29,97.91000292151509,0.0,1,Regulators propose stable oversight reforms,hold,sell,buy,hold
+2024-03-28,80.58,97.92967076270865,1.0,0,Housing market data pressure expectations,buy,sell,buy,hold
+2024-03-29,80.02,97.93074911792819,0.0,1,Energy firms announce cooling capital plans,hold,buy,sell,hold
+2024-03-30,79.41,97.91296559216157,-1.0,1,Currency markets experience improving volatility,sell,buy,sell,hold
+2024-03-31,79.4,97.9129934042418,0.0,1,Company A reports strong earnings outlook,hold,sell,buy,hold
+2024-04-01,80.34,97.89439584206676,-1.0,1,Central bank hints at improving policy stance,sell,buy,sell,hold
+2024-04-02,80.58,97.89584096495575,0.0,0,Commodity prices support amid supply shifts,hold,sell,buy,hold
+2024-04-03,78.7,97.87528220818173,-1.0,1,Tech sector sees cooling investment inflows,sell,buy,sell,hold
+2024-04-04,77.75,97.8549027089012,-1.0,1,Geopolitical tensions stabilize trade routes,sell,sell,buy,hold
+2024-04-05,78.85,97.85522633858534,0.0,2,Consumer demand shows weak trend,buy,sell,buy,sell
+2024-04-06,80.34,97.83492865765425,-1.0,1,Regulators propose improving oversight reforms,sell,buy,sell,hold
+2024-04-07,80.53,97.85454798268798,1.0,0,Housing market data stabilize expectations,buy,sell,buy,hold
+2024-04-08,79.09,97.8527611150123,0.0,1,Energy firms announce stable capital plans,hold,buy,sell,hold
+2024-04-09,78.62,97.8339289451626,-1.0,1,Currency markets experience improving volatility,sell,sell,buy,hold
