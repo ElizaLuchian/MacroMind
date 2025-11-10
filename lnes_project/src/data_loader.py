@@ -164,13 +164,18 @@ def _load_fnspid_split(
             "The 'datasets' package is required to load FNSPID data. Install it via `pip install datasets`."
         ) from exc
 
-    return load_dataset(
-        dataset_name,
-        split=split,
-        cache_dir=str(cache_dir) if cache_dir else None,
-        use_auth_token=auth_token,
-        use_local_files_only=use_local_files_only,
-    )
+    # Prepare kwargs, conditionally adding parameters based on version compatibility
+    load_kwargs = {
+        "path": dataset_name,
+        "split": split,
+        "cache_dir": str(cache_dir) if cache_dir else None,
+    }
+    
+    # Add auth token if provided
+    if auth_token:
+        load_kwargs["token"] = auth_token
+    
+    return load_dataset(**load_kwargs)
 
 
 def load_fnspid(
