@@ -7,10 +7,11 @@ Modular research codebase for detecting latent news events with open embeddings 
 - Process ~100 combined rows of news and prices for controlled experimentation.
 - Generate text embeddings with `sentence-transformers/all-MiniLM-L6-v2` (FinBERT optional).
 - Detect latent events via modular clustering (KMeans baseline, extensible to DBSCAN/GMM).
-- Simulate four archetype agents reacting to price momentum and clustered news sentiment.
+- Simulate trading agents: rule-based (momentum, contrarian) and **AI-powered** (FinBERT sentiment, Groq LLMs).
 - Quantify performance with profitability, volatility, clustering correlations, and decision metrics.
 - Provide repeatable pipelines, plots, and unit tests suitable for research iteration.
 - Support literature-grade validation by linking to public datasets such as FNSPID.
+- **NEW:** 100% FREE AI agents for sentiment analysis and LLM-based reasoning!
 
 ## Repository Layout
 
@@ -29,7 +30,7 @@ lnes_project/
 2. **Preprocessing** (`preprocess`) – normalize text and assemble combined strings.
 3. **Embedding** (`embedder`) – default SentenceTransformer with TF-IDF fallback and FinBERT option.
 4. **Clustering** (`clusterer`) – discover latent event regimes and visualize frequencies.
-5. **Agents** (`agents`) – Random, Momentum, Contrarian, and NewsReactive (cluster-aware) behaviors.
+5. **Agents** (`agents`) – Random, Momentum, Contrarian, NewsReactive (cluster-aware), FinBERT (AI sentiment), and Groq (LLM reasoning) behaviors.
 6. **Simulation** (`simulator`) – day-level price updates driven by aggregate order flow.
 7. **Metrics** (`metrics`) – accuracy, profitability, volatility clustering, correlation diagnostics.
 8. **Experiment scripts** (`experiment_smallset`, `experiment_fnspid`) – run curated or real-data studies.
@@ -42,6 +43,22 @@ python -m venv .venv
 pip install -r requirements.txt
 pytest
 ```
+
+### 🤖 Using AI Agents (FREE!)
+
+```bash
+# Install AI dependencies
+pip install transformers torch groq
+
+# Run with FinBERT sentiment agent (100% free, runs locally)
+python scripts/run_ai_experiment.py
+
+# Run with Groq LLM agent (free tier, requires API key)
+export GROQ_API_KEY="your-key"  # Get free key at console.groq.com
+python scripts/run_ai_experiment.py --groq
+```
+
+See **[AI_AGENTS_GUIDE.md](AI_AGENTS_GUIDE.md)** for detailed setup and comparison of AI agents.
 
 To replicate the case study end-to-end:
 
