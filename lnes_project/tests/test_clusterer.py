@@ -10,3 +10,5 @@ def test_cluster_embeddings_returns_valid_labels():
     assert result.model.cluster_centers_.shape == (2, 3)
 
 
+
+
