@@ -65,10 +65,15 @@ def simulate_market(
             "volume": float(row.get("volume", 0.0)),
         }
         cluster_id = int(row["cluster_id"]) if "cluster_id" in row and not pd.isna(row["cluster_id"]) else None
+        news_text = str(row.get("combined_text", "")) if "combined_text" in row else None
 
         net_flow = 0.0
         for agent in agents:
-            decision = agent.decide(market_state, cluster_id)
+            # Try passing news_text for AI agents, fall back to old signature
+            try:
+                decision = agent.decide(market_state, cluster_id, news_text)
+            except TypeError:
+                decision = agent.decide(market_state, cluster_id)
             action_log[agent.name].append(decision)
             net_flow += ACTION_IMPACT.get(decision, 0.0)
 
