@@ -1,0 +1,43 @@
+# Configuration for Small Dataset Experiment
+# Extends default_config.yaml
+
+experiment:
+  name: "small_dataset_experiment"
+  description: "Basic experiment using the small curated dataset"
+  random_seed: 42
+
+dataset:
+  type: "small"
+
+embedder:
+  backend: "tfidf"
+
+clustering:
+  k: 3
+
+agents:
+  enabled:
+    - Random
+    - Momentum
+    - Contrarian
+    - NewsReactive
+
+simulator:
+  alpha: 0.01
+  noise_std: 0.0
+
+metrics:
+  advanced_metrics: true
+  risk_free_rate: 0.02
+
+visualization:
+  plot_actions: true
+  plot_prices: true
+  save_plots: true
+
+output:
+  save_actions_csv: true
+  actions_csv_path: "experiment1_actions.csv"
+  verbose: true
+  show_actions: true
+

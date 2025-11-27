@@ -1,0 +1,192 @@
+# Default Configuration for MacroMind (LNES) Experiments
+# This configuration file contains all default parameters for experiments
+
+# ============================================================================
+# EXPERIMENT METADATA
+# ============================================================================
+experiment:
+  name: "default_experiment"
+  description: "Default configuration for LNES experiments"
+  random_seed: 42
+  save_results: true
+  results_dir: "results"
+
+# ============================================================================
+# DATASET CONFIGURATION
+# ============================================================================
+dataset:
+  # Dataset type: "small" or "fnspid"
+  type: "small"
+  
+  # Paths for small dataset
+  small:
+    news_path: "data/small_news.csv"
+    prices_path: "data/small_prices.csv"
+  
+  # Configuration for FNSPID dataset
+  fnspid:
+    tickers: ["AAPL"]
+    start_date: "2023-01-01"
+    end_date: "2023-03-31"
+    news_path: "data/fnspid_AAPL_news.csv"
+    prices_path: "data/fnspid_AAPL_prices.csv"
+
+# ============================================================================
+# EMBEDDING CONFIGURATION
+# ============================================================================
+embedder:
+  # Backend: "tfidf", "sentence-transformer", or "finbert"
+  backend: "tfidf"
+  
+  # Model name for sentence-transformer backend
+  model: "all-MiniLM-L6-v2"
+  
+  # Embedding dimension (used for TF-IDF)
+  embedding_dim: 384
+  
+  # Cache embeddings for faster re-runs
+  cache_embeddings: true
+  cache_dir: "results/embeddings_cache"
+
+# ============================================================================
+# CLUSTERING CONFIGURATION
+# ============================================================================
+clustering:
+  # Number of clusters
+  k: 3
+  
+  # Clustering algorithm: "kmeans", "dbscan", "hierarchical"
+  algorithm: "kmeans"
+  
+  # Random seed for reproducibility
+  random_state: 42
+  
+  # KMeans specific parameters
+  kmeans:
+    n_init: 10
+    max_iter: 300
+    
+  # DBSCAN specific parameters (if used)
+  dbscan:
+    eps: 0.5
+    min_samples: 5
+
+# ============================================================================
+# AGENT CONFIGURATION
+# ============================================================================
+agents:
+  # List of agent types to instantiate
+  # Available: Random, Momentum, Contrarian, NewsReactive, FinBERT, Groq
+  enabled:
+    - Random
+    - Momentum
+    - Contrarian
+    - NewsReactive
+  
+  # NewsReactive agent parameters
+  news_reactive:
+    threshold: 0.15
+    use_cluster_sentiment: true
+  
+  # FinBERT agent parameters
+  finbert:
+    confidence_threshold: 0.7
+    model_name: "ProsusAI/finbert"
+  
+  # Groq LLM agent parameters
+  groq:
+    model: "llama-3.1-8b-instant"
+    temperature: 0.1
+    max_tokens: 10
+    api_key_env: "GROQ_API_KEY"
+
+# ============================================================================
+# SIMULATOR CONFIGURATION
+# ============================================================================
+simulator:
+  # Price impact parameter (how much agent actions affect price)
+  alpha: 0.01
+  
+  # Noise standard deviation
+  noise_std: 0.0
+  
+  # Initial price (if not using reference prices)
+  initial_price: 100.0
+  
+  # Random seed
+  random_seed: 42
+
+# ============================================================================
+# METRICS CONFIGURATION
+# ============================================================================
+metrics:
+  # Enable advanced financial metrics
+  advanced_metrics: false
+  
+  # Risk-free rate for Sharpe ratio (annualized)
+  risk_free_rate: 0.02
+  
+  # VaR confidence level
+  var_confidence: 0.95
+  
+  # Transaction costs configuration
+  transaction_costs:
+    enabled: false
+    fixed_cost: 0.01
+    proportional_cost: 0.001  # 10 bps
+    slippage_bps: 5.0
+
+# ============================================================================
+# VISUALIZATION CONFIGURATION
+# ============================================================================
+visualization:
+  # Generate plots
+  plot_actions: false
+  plot_prices: false
+  
+  # Save plots to file
+  save_plots: false
+  plots_dir: "plots"
+  
+  # Figure size (width, height in inches)
+  figsize: [12, 8]
+  
+  # DPI for saved figures
+  dpi: 300
+  
+  # Plot style
+  style: "seaborn-v0_8-darkgrid"
+
+# ============================================================================
+# OUTPUT CONFIGURATION
+# ============================================================================
+output:
+  # Save action log to CSV
+  save_actions_csv: false
+  actions_csv_path: "actions.csv"
+  
+  # Print detailed output
+  verbose: true
+  
+  # Show agent decisions in console
+  show_actions: false
+  
+  # Generate performance report
+  generate_report: true
+
+# ============================================================================
+# REPRODUCIBILITY SETTINGS
+# ============================================================================
+reproducibility:
+  # Fix all random seeds
+  fix_seeds: true
+  
+  # Random seeds for different components
+  seeds:
+    global: 42
+    numpy: 42
+    embedder: 42
+    clustering: 42
+    simulator: 42
+    agents: 42
+

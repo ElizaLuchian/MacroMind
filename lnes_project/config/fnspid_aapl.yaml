@@ -1,0 +1,57 @@
+# Configuration for FNSPID AAPL Experiment
+# Extends default_config.yaml
+
+experiment:
+  name: "fnspid_aapl_experiment"
+  description: "Experiment using FNSPID dataset for AAPL stock"
+  random_seed: 42
+
+dataset:
+  type: "fnspid"
+  fnspid:
+    tickers: ["AAPL"]
+    start_date: "2023-01-01"
+    end_date: "2023-03-31"
+    news_path: "data/fnspid_AAPL_news.csv"
+    prices_path: "data/fnspid_AAPL_prices.csv"
+
+embedder:
+  backend: "sentence-transformer"
+  model: "all-MiniLM-L6-v2"
+  cache_embeddings: true
+
+clustering:
+  k: 5
+
+agents:
+  enabled:
+    - Random
+    - Momentum
+    - Contrarian
+    - NewsReactive
+    - FinBERT
+
+simulator:
+  alpha: 0.01
+  noise_std: 0.0
+
+metrics:
+  advanced_metrics: true
+  risk_free_rate: 0.02
+  transaction_costs:
+    enabled: true
+    fixed_cost: 0.01
+    proportional_cost: 0.001
+    slippage_bps: 5.0
+
+visualization:
+  plot_actions: true
+  plot_prices: true
+  save_plots: true
+
+output:
+  save_actions_csv: true
+  actions_csv_path: "fnspid_AAPL_actions.csv"
+  verbose: true
+  show_actions: false
+

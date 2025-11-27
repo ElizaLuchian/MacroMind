@@ -1,0 +1,61 @@
+# Configuration for AI Agents Comparison Experiment
+# Extends default_config.yaml
+# Compares FinBERT and Groq LLM agents with rule-based baselines
+
+experiment:
+  name: "ai_agents_comparison"
+  description: "Comparison of AI agents (FinBERT, Groq) vs rule-based agents"
+  random_seed: 42
+
+dataset:
+  type: "fnspid"
+  fnspid:
+    tickers: ["AAPL"]
+    start_date: "2023-01-01"
+    end_date: "2023-03-31"
+
+embedder:
+  backend: "sentence-transformer"
+  model: "all-MiniLM-L6-v2"
+  cache_embeddings: true
+
+clustering:
+  k: 3
+
+agents:
+  enabled:
+    - Random
+    - Momentum
+    - FinBERT
+    - Groq
+  
+  finbert:
+    confidence_threshold: 0.7
+  
+  groq:
+    model: "llama-3.1-8b-instant"
+    temperature: 0.1
+    max_tokens: 10
+
+simulator:
+  alpha: 0.01
+  noise_std: 0.0
+
+metrics:
+  advanced_metrics: true
+  risk_free_rate: 0.02
+  transaction_costs:
+    enabled: true
+
+visualization:
+  plot_actions: true
+  plot_prices: true
+  save_plots: true
+  plots_dir: "plots/ai_agents"
+
+output:
+  save_actions_csv: true
+  actions_csv_path: "ai_agents_actions.csv"
+  verbose: true
+  show_actions: true
+
