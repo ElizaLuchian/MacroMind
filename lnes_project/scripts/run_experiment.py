@@ -16,6 +16,7 @@ if str(ROOT) not in sys.path:
 from src.clusterer import plot_cluster_distribution
 from src.experiment_fnspid import run_fnspid_experiment
 from src.experiment_smallset import run_small_dataset_experiment
+from src import metrics as metrics_module
 
 
 def _plot_prices(reference: pd.Series, simulated: pd.Series) -> None:
@@ -183,6 +184,28 @@ def main() -> None:
         action="store_true",
         help="Generate a plot showing agent actions over time.",
     )
+    parser.add_argument(
+        "--advanced-metrics",
+        action="store_true",
+        help="Compute and display advanced financial metrics (Sharpe, drawdown, VaR, etc.).",
+    )
+    parser.add_argument(
+        "--transaction-costs",
+        action="store_true",
+        help="Apply transaction costs to agent profitability analysis.",
+    )
+    parser.add_argument(
+        "--fixed-cost",
+        type=float,
+        default=0.01,
+        help="Fixed transaction cost per trade (default: 0.01).",
+    )
+    parser.add_argument(
+        "--proportional-cost",
+        type=float,
+        default=0.001,
+        help="Proportional transaction cost (default: 0.001 = 10 bps).",
+    )
     args = parser.parse_args()
 
     embedder_kwargs = {"backend": args.backend}
@@ -215,6 +238,49 @@ def main() -> None:
     print(f"Cluster-price correlation: {metrics['cluster_price_correlation']:.3f}")
     print("\nAgent profitability:")
     print(metrics["agent_profitability"].to_string(index=False))
+    
+    # Advanced metrics if requested
+    if args.advanced_metrics:
+        print("\n" + "=" * 70)
+        print("=== ADVANCED FINANCIAL METRICS ===")
+        print("=" * 70)
+        
+        # Get price series
+        sim_prices = simulation.to_frame()["simulated_close"].values
+        ref_prices = merged["close"].values
+        
+        # Generate comprehensive report
+        report = metrics_module.generate_performance_report(
+            prices=sim_prices,
+            action_log=simulation.action_log,
+            reference_prices=ref_prices,
+            risk_free_rate=0.02,
+            include_transaction_costs=args.transaction_costs,
+            fixed_cost=args.fixed_cost if args.transaction_costs else 0.0,
+            proportional_cost=args.proportional_cost if args.transaction_costs else 0.0,
+        )
+        
+        # Print formatted report
+        formatted = metrics_module.format_performance_report(report, title="Simulated Portfolio Performance")
+        print(formatted)
+        
+        # Print agent comparison if available
+        if "agent_profitability" in report:
+            print("\n" + "=" * 70)
+            print("=== DETAILED AGENT COMPARISON ===")
+            print("=" * 70)
+            comp_df = metrics_module.compare_agents_report(
+                simulation.action_log,
+                sim_prices,
+            )
+            print(comp_df.to_string(index=False))
+        
+        # Print transaction cost analysis if enabled
+        if args.transaction_costs and "transaction_costs" in report:
+            print("\n" + "=" * 70)
+            print("=== TRANSACTION COST ANALYSIS ===")
+            print("=" * 70)
+            print(report["transaction_costs"].to_string(index=False))
 
     # Create detailed action log DataFrame
     action_df = _create_action_log_dataframe(simulation, merged)
