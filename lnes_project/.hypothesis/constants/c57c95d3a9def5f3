@@ -1,0 +1,4 @@
+# file: D:\FACULTATE\MacroMind\lnes_project\conftest.py
+# hypothesis_version: 6.148.7
+
+[0.0, 0.01, 0.75, 1.0, 100.0, 384, '--runintegration', '--runslow', 'Contrarian', 'Momentum', 'NewsReactive', 'Random', 'agents', 'alpha', 'backend', 'buy', 'clustering', 'data', 'dataset', 'embedder', 'embedding_dim', 'experiment', 'fixtures', 'hold', 'k', 'kmeans', 'label', 'markers', 'method', 'name', 'noise_std', 'positive', 'random', 'run slow tests', 'score', 'seed', 'sell', 'session', 'simulator', 'slow', 'small', 'source', 'store_true', 'test_experiment', 'tests', 'tfidf', 'types']

@@ -1,0 +1,4 @@
+# file: D:\FACULTATE\MacroMind\lnes_project\src\simulator.py
+# hypothesis_version: 6.148.7
+
+[-1.0, 0.0, 0.01, 1.0, 'buy', 'close', 'cluster_id', 'combined_text', 'date', 'hold', 'order_flow', 'prev_price', 'price', 'sell', 'simulated_close', 'volume']

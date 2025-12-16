@@ -1,0 +1,4 @@
+# file: D:\FACULTATE\MacroMind\lnes_project\src\data_loader.py
+# hypothesis_version: 6.148.7
+
+[5000, 20000, 'Adj Close', 'AdjClose', 'Article', 'Article Title', 'Article_title', 'Body', 'Close', 'Content', 'Date', 'Datetime', 'Finbert_sentiment', 'Headline', 'High', 'Low', 'Open', 'PublishDate', 'Sentiment', 'Sentiment_label', 'Stock Symbol', 'Stock_symbol', 'Symbol', 'Ticker', 'Title', 'Volume', 'Zihan1004/FNSPID', '_news', '_price', 'article_text', 'body', 'cache_dir', 'close', 'coerce', 'content', 'date', 'headline', 'high', 'inner', 'low', 'neg', 'negative', 'neu', 'neutral', 'news', 'open', 'path', 'pos', 'positive', 'price', 'publish_date', 'sentiment', 'sentiment_hint', 'sentiment_label', 'split', 'symbol', 'ticker', 'timestamp', 'title', 'token', 'volume']

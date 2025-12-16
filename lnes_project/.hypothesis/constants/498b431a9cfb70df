@@ -1,0 +1,4 @@
+# file: D:\FACULTATE\MacroMind\lnes_project\src\agent_comparison.py
+# hypothesis_version: 6.148.7
+
+[0.0, 0.05, 0.2, 0.5, 0.8, 0.95, 1.0, 10000, '### Rankings ###', '<', '<<', '=', '>', '>>', 'Return', 'agent', 'agent1', 'agent2', 'ci_lower', 'ci_upper', 'consistency_score', 'effect_size', 'greater', 'holm', 'interpretation', 'large', 'losses', 'mean', 'mean_diff', 'medium', 'n_samples', 'negligible', 'overall_mean', 'overall_std', 'p_value', 'performance', 'rank', 'reject', 'rolling_std_mean', 'small', 'std', 'ties', 'ttest', 'two-sided', 'wilcoxon', 'win_rate', 'wins', '≈']

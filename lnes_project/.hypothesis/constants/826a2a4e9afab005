@@ -1,0 +1,4 @@
+# file: D:\FACULTATE\MacroMind\lnes_project\src\statistical_tests.py
+# hypothesis_version: 6.148.7
+
+[0.0, 0.05, 0.95, 0.975, 1.0, 100, 10000, 'a1_correct_a2_wrong', 'a1_wrong_a2_correct', 'adjusted_p', 'agent1', 'agent2', 'bonferroni', 'both_correct', 'both_wrong', 'ci_lower', 'ci_upper', 'contingency_table', 'dof', 'fdr_bh', 'greater', 'holm', 'less', 'mean_diff', 'median_diff', 'n_permutations', 'observed_statistic', 'original_p', 'p_value', 'rank', 'reject', 'statistic', 'stderr', 't_statistic', 'test_statistic', 'two-sided']

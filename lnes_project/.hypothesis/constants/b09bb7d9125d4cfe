@@ -1,0 +1,4 @@
+# file: D:\FACULTATE\MacroMind\lnes_project\src\agents.py
+# hypothesis_version: 6.148.7
+
+[0.0, 0.1, 0.15, 0.7, 512, 'GROQ_API_KEY', 'ProsusAI/finbert', 'buy', 'content', 'hold', 'label', 'llama-3.1-8b-instant', 'negative', 'positive', 'prev_price', 'price', 'role', 'score', 'sell', 'sentiment-analysis', 'user']

@@ -1,0 +1,4 @@
+# file: D:\FACULTATE\MacroMind\lnes_project\src\benchmarks.py
+# hypothesis_version: 6.148.7
+
+[0.0, 1e-10, 0.5, 100, 'BuyAndHold', 'MA_Crossover_5_10', 'Random', 'Return', 'SimpleMeanReversion', 'SimpleMomentum', 'agent', 'agent_mean', 'beats_benchmark', 'benchmark', 'benchmark_mean', 'buy', 'difference', 'hold', 'improvement_pct', 'max', 'mean', 'median', 'min', 'n_samples', 'price', 'sell', 'sharpe', 'sharpe_ratio', 'std', 'win_rate']
